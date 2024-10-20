@@ -5,6 +5,7 @@ const classSchema = new Schema({
   classId: {
     type: Number,
     required: true,
+    unique: true,
   },
   teacher: {
     type: String,

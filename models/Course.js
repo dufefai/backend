@@ -5,6 +5,7 @@ const courseSchema = new Schema({
     id: {
         type: Number,
         required: true,
+        unique: true,
       },
       dayOfWeek: {
         type: String,
