@@ -7,6 +7,7 @@ const courseController = {
             console.log(req.body)
             const ids = courses.map(course => course.id);
             const existingCourses = await Course.find({ id: { $in: ids } });
+ console.log({"hello" :existingCourses})
             const existingIds = existingCourses.map(course => course.id);
             const newCourses = courses.filter(course => !existingIds.includes(course.id));
             console.log(newCourses)
