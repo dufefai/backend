@@ -4,7 +4,6 @@ const classController = {
     createClass : async (req, res) => {
         try {
             const classes = req.body;
-            console.log(req.body)
             const classIds = classes.map(cls => cls.classId);
             const existingClasses = await Class.find({ classId: { $in: classIds } });
             const existingIds = existingClasses.map(cls => cls.classId);
